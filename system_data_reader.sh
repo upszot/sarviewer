@@ -65,8 +65,8 @@ else
 	echo "List of sa* files available at this moment to retrieve data from:"
 	echo ""
 	echo "-------------------------------------------"
-	for file in $(ls /var/log/sysstat | grep -v sar);do
-		echo "File $file with data from $(sar -r -f /var/log/sysstat/$file | head -1 )";
+	for file in $(ls $sysstat_logdir | grep -v sar);do
+		echo "File $file with data from $(sar -r -f $sysstat_logdir/$file | head -1 )";
 	done
 	echo "-------------------------------------------"
 	echo ""
